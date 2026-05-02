@@ -1,0 +1,16 @@
+{
+  "name": "better-media-content",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Расширение Chromium: стрелки и пробел по единому стандарту для HTML5 медиа (ГОСТ в кавычках).",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "watch": "node scripts/build.mjs --watch"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.268",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.6.3"
+  }
+}

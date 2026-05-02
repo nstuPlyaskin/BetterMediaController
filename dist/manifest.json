@@ -1,0 +1,76 @@
+{
+  "manifest_version": 3,
+  "name": "Управление медиа плеером по ГОСТу",
+  "version": "1.0.0",
+  "description": "Стрелки и пробел по единому стандарту: перемотка, громкость, пауза для HTML5 video/audio.",
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Медиа по ГОСТу",
+    "default_icon": {
+      "16": "icon.png",
+      "32": "icon.png",
+      "48": "icon.png"
+    }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "commands": {
+    "seek-back": {
+      "suggested_key": {
+        "default": "Alt+Shift+Left"
+      },
+      "description": "Перемотка назад (дубль стрелки влево)"
+    },
+    "seek-forward": {
+      "suggested_key": {
+        "default": "Alt+Shift+Right"
+      },
+      "description": "Перемотка вперёд (дубль стрелки вправо)"
+    },
+    "volume-up": {
+      "suggested_key": {
+        "default": "Alt+Shift+Up"
+      },
+      "description": "Громкость + (дубль стрелки вверх)"
+    },
+    "volume-down": {
+      "suggested_key": {
+        "default": "Alt+Shift+Down"
+      },
+      "description": "Громкость − (дубль стрелки вниз)"
+    },
+    "toggle-pause": {
+      "description": "Пауза / воспроизведение. Назначьте ярлык в chrome://extensions/shortcuts (лимит: 4 suggested_key в manifest)."
+    }
+  }
+}

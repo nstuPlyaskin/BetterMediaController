@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Медиа по ГОСТу</title>
+    <style>
+      :root {
+        font-family: system-ui, Segoe UI, sans-serif;
+        color: #e8eaed;
+        background: #292a2d;
+      }
+      body {
+        width: 17rem;
+        margin: 0;
+        padding: 0.9rem;
+        box-sizing: border-box;
+      }
+      h1 {
+        font-size: 0.95rem;
+        margin: 0 0 0.5rem;
+        font-weight: 600;
+      }
+      .host {
+        font-size: 0.8rem;
+        color: #9aa0a6;
+        word-break: break-all;
+        margin-bottom: 0.75rem;
+      }
+      button {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 6px;
+        border: 1px solid #5f6368;
+        background: #3c4043;
+        color: #e8eaed;
+        cursor: pointer;
+        font-weight: 500;
+      }
+      button.primary {
+        background: #8ab4f8;
+        color: #202124;
+        border-color: transparent;
+      }
+      button + button {
+        margin-top: 0.5rem;
+      }
+      a {
+        display: block;
+        margin-top: 0.65rem;
+        font-size: 0.8rem;
+        color: #8ab4f8;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Медиа по ГОСТу</h1>
+    <div id="host" class="host">…</div>
+    <button type="button" id="toggle" class="primary"></button>
+    <button type="button" id="options">Все настройки…</button>
+    <a href="#" id="open-shortcuts">Горячие клавиши расширения…</a>
+    <script src="popup.js"></script>
+  </body>
+</html>
