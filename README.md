@@ -20,4 +20,4 @@
 
 **Права:** `storage`, `activeTab`, `<all_urls>` — только работа на сайтах и настройки; **сбор данных на сервер нет**.
 
-Репозиторий: [nstuPlyaskin/BetterMediaContent](https://github.com/nstuPlyaskin/BetterMediaContent)
+Репозиторий: [nstuPlyaskin/BetterMediaController](https://github.com/nstuPlyaskin/BetterMediaController)
